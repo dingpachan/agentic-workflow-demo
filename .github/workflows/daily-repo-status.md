@@ -17,6 +17,7 @@ permissions:
 network: defaults
 
 tools:
+  bash: ["cat", "ls", "find", "grep", "head", "tail", "wc"]
   github:
     # If in a public repo, setting `lockdown: false` allows
     # reading issues, pull requests and comments from 3rd-parties
@@ -32,6 +33,9 @@ safe-outputs:
     labels: [report, daily-status]
     close-older-issues: true
 source: githubnext/agentics/workflows/repo-status.md@42c2ab5b4e4c9273534c39259b2e0df7f20f07e9
+
+engine: copilot
+model: gpt-4o
 ---
 
 # Repo Status
